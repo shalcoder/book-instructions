@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Instructions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        .instructions {
+            display: none;
+            padding: 10px;
+            background: #e8f0fe;
+            border-left: 5px solid #007BFF;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bookmark Instructions</h1>
+        
+        <div class="section">
+            <h2>Google Chrome</h2>
+            <button class="button" onclick="toggleInstructions('chrome')">Show Instructions</button>
+            <div id="chrome" class="instructions">
+                <ul>
+                    <li>Open the webpage you want to bookmark.</li>
+                    <li>Click the ⭐ (star) icon in the address bar.</li>
+                    <li>Rename it (optional) and choose a folder.</li>
+                    <li>Click "Done."</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Mozilla Firefox</h2>
+            <button class="button" onclick="toggleInstructions('firefox')">Show Instructions</button>
+            <div id="firefox" class="instructions">
+                <ul>
+                    <li>Open the desired webpage.</li>
+                    <li>Click the ⭐ (star) icon in the address bar.</li>
+                    <li>Edit the name and folder (optional).</li>
+                    <li>Click "Done."</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Microsoft Edge</h2>
+            <button class="button" onclick="toggleInstructions('edge')">Show Instructions</button>
+            <div id="edge" class="instructions">
+                <ul>
+                    <li>Open the webpage you want to save.</li>
+                    <li>Click the ⭐ (star) icon in the address bar.</li>
+                    <li>Select a folder and click "Done."</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Safari (Mac & iOS)</h2>
+            <button class="button" onclick="toggleInstructions('safari')">Show Instructions</button>
+            <div id="safari" class="instructions">
+                <ul>
+                    <li>Open the webpage.</li>
+                    <li>Click the "Share" button (🡆) and select "Add Bookmark."</li>
+                    <li>Choose a folder and tap "Save."</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleInstructions(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
